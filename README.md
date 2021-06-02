@@ -81,7 +81,7 @@ scala>
 2. The queries that you can run are only limited to select queries and you cant run count(*) or insert queries(i.e.., queries which include MR) because there is no yarn installed for a mapreduce job.
 3. But still if you want to execute insert and count(*) queies run the below command before running your query.
 ```commandline
-hive> set mapreduce.framework.name=local; //default value is yarn.Possible values are yarn/classic and local
+hive>set mapreduce.framework.name=local; //default value is yarn.Possible values are yarn/classic and local
 hive>select count(*) from table;
 ```
 which sets the runtime framework for executing MapReduce jobs to local because is is a standaalone service.
