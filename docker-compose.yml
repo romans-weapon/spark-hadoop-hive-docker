@@ -23,5 +23,3 @@ services:
       - postgres-metatsore
     privileged: "true"
     command: "/usr/sbin/init"
-                
-                
