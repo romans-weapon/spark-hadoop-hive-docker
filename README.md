@@ -76,13 +76,5 @@ Type :help for more information.
 scala>
 ```
 
-# Points to remember
-1. All the services installed within the conatiner are standalone servies used for testing purposes.So should be used with less load only for testing.
-2. The queries that you can run are only limited to select queries and you cant run count(*) or insert queries(i.e.., queries which include MR) because there is no yarn installed for a mapreduce job.
-3. But still if you want to execute insert and count(*) queies run the below command before running your query.
-```commandline
-hive>set mapreduce.framework.name=local; //default value is yarn.Possible values are yarn/classic and local
-hive>select count(*) from table;
-```
-which sets the runtime framework for executing MapReduce jobs to local because is is a standaalone service.
+
 
