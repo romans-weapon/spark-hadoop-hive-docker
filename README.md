@@ -99,7 +99,7 @@ Transaction isolation: TRANSACTION_REPEATABLE_READ
 0: jdbc:hive2://>
 ```
 
-The username and password for connecting to hive using beeline is 
+The username and password for connecting to hive using beeline or through jdbc is 
 ```commandline
 username: hive
 password: hive
