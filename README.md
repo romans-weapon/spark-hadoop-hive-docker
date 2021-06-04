@@ -4,13 +4,16 @@
 [![Code Quality Score](https://www.code-inspector.com/project/23311/score/svg)](https://www.code-inspector.com/project/23311/score/svg)
 [![GitHub tag](https://img.shields.io/github/v/release/AnudeepKonaboina/spark-hadoop-hive-docker)](https://github.com/AnudeepKonaboina/spark-hadoop-hive-docker/tags)
 
-This repo consists of the all docker/configuration/shell-script files related to spinning up spark with hadoop and hive ecosystem within a docker container.
+This repo consists of the all dockerfiles/configuration-files/shell-scripts for spinning up spark in standalone mode with hadoop and hive leveraged inside a docker container.
+This can be used for exploring developing and testing spark jobs on topi of Hadoop.
 
-# How to Run
-1. Navigate to the main directory 
+
+# Setps to setup
+1. Clone the project abd navigate to the main directory 
 ```commandline
-cd spark-hadoop-hive-docker/
+git clone https://github.com/romans-weapon/spark-hadoop-hive-docker.git && cd spark-hadoop-hive-docker/
 ```
+
 2. Run the script file
 ```commandline
 sh setup.sh
@@ -20,15 +23,18 @@ sh setup.sh
 ```commandline
 CONTAINER ID   IMAGE                           COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                           NAMES
 feca5a88cca9   spark-with-hadoop-hive:latest   "/usr/sbin/init"         12 minutes ago   Up 12 minutes   22/tcp, 0.0.0.0:4040-4041->4040-4041/tcp, :::4040-4041->4040-4041/tcp, 0.0.0.0:8089->8088/tcp, :::8089->8088/tcp, 0.0.0.0:8090->18080/tcp, :::8090->18080/tcp   spark
-bd8e86d70920   hive-metastore:latest           "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes   5432/tcp                                                                                                                                                        hive_metastore
+bd8e86d70920   hive-metastore:latest           "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes   5432/tcp                                                                                                                                                          hive_metastore
 ```
 4. Go into the spark container using the command
 ```commandline
 docker exec -it spark bash 
 ```
-5. Once you get into the container,you will have spark hdfs and hive ready for you to use
+5. Once you get into the container,you will have spark hdfs and hive ready for you to use.
 
-## To run hive inside container
+
+# How to use it
+
+#### To run hive inside container:
 ```commandline
 [root@hadoop /]# hive
 which: no hbase in (/usr/bin/apache-hive-2.1.1-bin/bin:/usr/bin/spark-2.4.7-bin-without-hadoop/bin:/usr/bin/spark-2.4.7-bin-without-hadoop/sbin:/usr/bin/hadoop-2.10.1/bin:/usr/bin/hadoop-2.10.1/sbin:/usr/lib/jvm/java-1.8.0-openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin)
@@ -43,7 +49,7 @@ Hive-on-MR is deprecated in Hive 2 and may not be available in the future versio
 hive>
 ```
 
-## To run hdfs commands within container
+#### To run hdfs commands within container:
 ```commandline
 [root@hadoop /]# hdfs dfs -ls /
 21/06/02 12:49:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
@@ -53,7 +59,7 @@ drwxr-xr-x   - root supergroup          0 2021-06-02 12:22 /user
 [root@hadoop /]#
 ```
 
-## To run spark shell within container
+#### To run spark shell within container
 ```commandline
 [root@hadoop /]# spark-shell
 21/06/02 12:50:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
@@ -76,7 +82,7 @@ Type :help for more information.
 scala>
 ```
 
-## To run hive using beeline
+#### To run hive using beeline:
 ```commandline
 [root@hadoop /]# beeline
 which: no hbase in (/usr/bin/apache-hive-2.1.1-bin/bin:/usr/bin/spark-2.4.7-bin-without-hadoop/bin:/usr/bin/spark-2.4.7-bin-without-hadoop/sbin:/usr/bin/hadoop-2.10.1/bin:/usr/bin/hadoop-2.10.1/sbin:/usr/lib/jvm/java-1.8.0-openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin)
