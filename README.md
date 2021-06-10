@@ -4,8 +4,8 @@
 [![Code Quality Score](https://www.code-inspector.com/project/23311/score/svg)](https://www.code-inspector.com/project/23311/score/svg)
 [![GitHub tag](https://img.shields.io/github/v/release/AnudeepKonaboina/spark-hadoop-hive-docker)](https://github.com/AnudeepKonaboina/spark-hadoop-hive-docker/tags)
 
-This repo consists of the all dockerfiles/configuration-files/shell-scripts for spinning up spark in standalone mode with hadoop and hive leveraged inside a docker container.
-This can be used for exploring developing and testing spark jobs on topi of Hadoop.
+This repo consists of the dockerfiles/configuration-files/shell-scripts for spinning up spark-standalone with hadoop and hive leveraged on docker containers.
+This can be used for exploring developing and testing spark jobs on top of Hadoop.
 
 
 # Setps to setup
@@ -25,11 +25,11 @@ CONTAINER ID   IMAGE                           COMMAND                  CREATED 
 feca5a88cca9   spark-with-hadoop-hive:latest   "/usr/sbin/init"         12 minutes ago   Up 12 minutes   22/tcp, 0.0.0.0:4040-4041->4040-4041/tcp, :::4040-4041->4040-4041/tcp, 0.0.0.0:8089->8088/tcp, :::8089->8088/tcp, 0.0.0.0:8090->18080/tcp, :::8090->18080/tcp   spark
 bd8e86d70920   hive-metastore:latest           "docker-entrypoint.s…"   12 minutes ago   Up 12 minutes   5432/tcp                                                                                                                                                          hive_metastore
 ```
-4. Go into the spark container using the command
+4. SSH into the spark container using the command
 ```commandline
 docker exec -it spark bash 
 ```
-5. Once you get into the container,you will have spark hdfs and hive ready for you to use.
+5. Once you get into the container,you will have spark ,hdfs and hive ready for you to use.
 
 
 # How to use it
