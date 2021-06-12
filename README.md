@@ -1,11 +1,11 @@
 # spark-hadoop-hive-docker
 
-[![Code Quality Grade](https://www.code-inspector.com/project/23311/status/svg)](https://www.code-inspector.com/project/23311/status/svg)
-[![Code Quality Score](https://www.code-inspector.com/project/23311/score/svg)](https://www.code-inspector.com/project/23311/score/svg)
-[![GitHub tag](https://img.shields.io/github/v/release/AnudeepKonaboina/spark-hadoop-hive-docker)](https://github.com/AnudeepKonaboina/spark-hadoop-hive-docker/tags)
+[![Code Quality Grade](https://www.code-inspector.com/project/23493/status/svg)](https://www.code-inspector.com/project/23493/status/svg)
+[![Code Quality Score](https://www.code-inspector.com/project/23493/score/svg)](https://www.code-inspector.com/project/23493/score/svg)
+[![GitHub tag](https://img.shields.io/github/v/release/romans-weapon/spark-hadoop-hive-docker)](https://github.com/romans-weapon/spark-hadoop-hive-docker/tags)
 
-This repo consists of the dockerfiles/configuration-files/shell-scripts for spinning up spark-standalone with hadoop and hive leveraged on docker containers.
-This can be used for exploring developing and testing spark jobs on top of Hadoop.
+
+This project allows you to spin up an environment containing spark-standalone with hadoop and hive leveraged inside docker containers.This can be used for exploring developing and testing spark jobs, work with hive to run HQL queries and also execute HDFS commands.
 
 
 # Setps to setup
@@ -59,7 +59,7 @@ drwxr-xr-x   - root supergroup          0 2021-06-02 12:22 /user
 [root@hadoop /]#
 ```
 
-#### To run spark shell within container
+#### To run spark shell within container:
 ```commandline
 [root@hadoop /]# spark-shell
 21/06/02 12:50:55 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
