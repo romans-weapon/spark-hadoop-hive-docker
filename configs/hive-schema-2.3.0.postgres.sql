@@ -373,7 +373,7 @@ CREATE TABLE "TBLS" (
     "TBL_TYPE" character varying(128) DEFAULT NULL::character varying,
     "VIEW_EXPANDED_TEXT" text,
     "VIEW_ORIGINAL_TEXT" text,
-    "IS_REWRITE_ENABLED" boolean NOT NULL DEFAULT false
+    "IS_REWRITE_ENABLED" boolean NOT NULL
 );
 
 
@@ -1470,4 +1470,9 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 ------------------------------
 -- Transaction and lock tables
 ------------------------------
--- Run seperately with bash script
+-- \i hive-txn-schema-2.3.0.postgres.sql;
+
+-- -----------------------------------------------------------------
+-- Record schema version. Should be the last step in the init script
+-- -----------------------------------------------------------------
+INSERT INTO "VERSION" ("VER_ID", "SCHEMA_VERSION", "VERSION_COMMENT") VALUES (1, '2.3.0', 'Hive release version 2.3.0');
