@@ -19,7 +19,7 @@ This project allows you to spin up an environment containing spark-standalone wi
 # Setps to setup
 1. Clone the project abd navigate to the main directory 
 ```commandline
-git clone https://github.com/romans-weapon/spark-hadoop-hive-docker.git && cd spark-hadoop-hive-docker/
+git clone -b spark-2.4.7 https://github.com/romans-weapon/spark-hadoop-hive-docker.git && cd spark-hadoop-hive-docker/
 ```
 
 2. Run the script file
