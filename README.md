@@ -118,5 +118,6 @@ The username and password for connecting to hive using beeline or through jdbc i
 username: hive
 password: hive
 ```
-
+# Author
+Anudeep Konaboina <krantianudeep@gmail.com>
 
