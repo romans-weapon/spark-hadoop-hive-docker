@@ -7,6 +7,14 @@
 
 This project allows you to spin up an environment containing spark-standalone with hadoop and hive leveraged inside docker containers.This can be used for exploring developing and testing spark jobs, work with hive to run HQL queries and also execute HDFS commands.
 
+# Versions support
+
+| Service      | Version     |
+| -----------  | ----------- |
+| Spark        | 2.4.7       |
+| Hadoop       | 2.10.1      |
+| Hive         | 2.1.1       |
+
 
 # Setps to setup
 1. Clone the project abd navigate to the main directory 
