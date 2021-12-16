@@ -1,7 +1,7 @@
 # spark-hadoop-hive-docker
 
-[![Code Quality Grade](https://www.code-inspector.com/project/23493/status/svg)](https://www.code-inspector.com/project/23493/status/svg)
-[![Code Quality Score](https://www.code-inspector.com/project/23493/score/svg)](https://www.code-inspector.com/project/23493/score/svg)
+[![Code Quality Grade](https://api.codiga.io/project/23493/status/svg)](https://api.codiga.io/project/23493/status/svg)
+[![Code Quality Score](https://api.codiga.io/project/23493/score/svg)](https://api.codiga.io/project/23493/score/svg)
 [![GitHub tag](https://img.shields.io/github/v/release/romans-weapon/spark-hadoop-hive-docker)](https://github.com/romans-weapon/spark-hadoop-hive-docker/tags)
 
 
